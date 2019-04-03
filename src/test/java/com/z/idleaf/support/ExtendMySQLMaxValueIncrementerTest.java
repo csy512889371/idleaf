@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.zhuzhong.idleaf.support;
+package com.z.idleaf.support;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * 
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:com/zhuzhong/idleaf/support/extendmysqlapplicationContext.xml" })
+@ContextConfiguration(locations = { "classpath:com/z/idleaf/support/extendmysqlapplicationContext.xml" })
 public class ExtendMySQLMaxValueIncrementerTest {
 
     @Autowired

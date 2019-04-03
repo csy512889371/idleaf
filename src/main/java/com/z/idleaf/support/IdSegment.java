@@ -1,4 +1,4 @@
-package com.zhuzhong.idleaf.support;
+package com.z.idleaf.support;
 
 import java.util.Date;
 
@@ -72,5 +72,11 @@ public class IdSegment {
     public void setStep(Long step) {
         this.step = step;
     }
+
+	@Override
+	public String toString() {
+		return "IdSegment [minId=" + minId + ", maxId=" + maxId + ", step=" + step + ", middleId=" + middleId
+				+ ", lastUpdateTime=" + lastUpdateTime + ", currentUpdateTime=" + currentUpdateTime + "]";
+	}
 
 }

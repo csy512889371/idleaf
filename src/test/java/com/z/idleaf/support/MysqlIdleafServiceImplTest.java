@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.zhuzhong.idleaf.support;
+package com.z.idleaf.support;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
@@ -22,7 +23,7 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import com.zhuzhong.idleaf.IdLeafService;
+import com.z.idleaf.IdLeafService;
 
 /**
  * @author sunff
@@ -32,10 +33,11 @@ import com.zhuzhong.idleaf.IdLeafService;
 // @TransactionConfiguration(transactionManager = "txManager", defaultRollback =
 // true)
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:com/zhuzhong/idleaf/support/applicationContext.xml" })
+@ContextConfiguration(locations = { "classpath:com/z/idleaf/support/applicationContext.xml" })
 public class MysqlIdleafServiceImplTest {
 
     @Autowired
+    @Qualifier("orderIdLeafService")
     private IdLeafService idLeafService;
 
     @Autowired
